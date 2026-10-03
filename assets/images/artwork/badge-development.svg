@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240">
+  <!-- ByteX role badge "role-development" (placeholder until a real photo is added). -->
+  <rect width="240" height="240" fill="#FD1843"/>
+  <g transform="translate(48.0 48.0) scale(0.3600)" fill="none" stroke="#FFF9FA"
+     stroke-width="30.56" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M135 105 40 200 135 295M265 105 360 200 265 295M230 70 170 330"/>
+  </g>
+</svg>

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200" width="1200" height="1200">
+  <!-- ByteX illustration "business-websites". Colours: #FD1843 (True Pink), #FFF9FA (Chill White). -->
+  <defs>
+    <radialGradient id="glow" cx="0.5" cy="0.55" r="0.65">
+      <stop offset="0" stop-color="#FD1843" stop-opacity=".55"/>
+      <stop offset=".45" stop-color="#FD1843" stop-opacity=".16"/>
+      <stop offset="1" stop-color="#FD1843" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M60 0H0V60" fill="none" stroke="#FFF9FA" stroke-opacity=".05" stroke-width="2"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="1200" fill="#1B1B1B"/>
+  <rect width="1200" height="1200" fill="url(#grid)"/>
+  <rect width="1200" height="1200" fill="url(#glow)"/>
+  <g transform="translate(385.0 313.0) scale(1.075)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <g stroke="#8F0A26" stroke-width="31.63" transform="translate(9.30 11.16)">
+        <rect x="20" y="50" width="360" height="300" rx="40"/>
+        <path d="M20 125H380"/>
+        <path d="M70 88h0M112 88h0M154 88h0"/>
+        <rect x="75" y="165" width="250" height="60" rx="18"/>
+        <path d="M80 290h50M175 290h50M270 290h50"/>
+    </g>
+    <g stroke="#FFF9FA" stroke-width="31.63">
+        <rect x="20" y="50" width="360" height="300" rx="40"/>
+        <path d="M20 125H380"/>
+        <path d="M70 88h0M112 88h0M154 88h0"/>
+        <rect x="75" y="165" width="250" height="60" rx="18"/>
+        <path d="M80 290h50M175 290h50M270 290h50"/>
+    </g>
+  </g>
+</svg>

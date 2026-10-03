@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 1200" width="960" height="1200">
+  <!-- ByteX illustration "zero-unemployment". Colours: #FD1843 (True Pink), #FFF9FA (Chill White). -->
+  <defs>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.65">
+      <stop offset="0" stop-color="#FD1843" stop-opacity=".55"/>
+      <stop offset=".45" stop-color="#FD1843" stop-opacity=".16"/>
+      <stop offset="1" stop-color="#FD1843" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M60 0H0V60" fill="none" stroke="#FFF9FA" stroke-opacity=".05" stroke-width="2"/>
+    </pattern>
+  </defs>
+  <rect width="960" height="1200" fill="#1B1B1B"/>
+  <rect width="960" height="1200" fill="url(#grid)"/>
+  <rect width="960" height="1200" fill="url(#glow)"/>
+  <path d="M77 1032H672Q702 1032 724 1010L806 840"
+        fill="none" stroke="#FD1843" stroke-opacity=".55" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+  <g transform="translate(270.0 318.0) scale(1.05)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <g stroke="#8F0A26" stroke-width="32.38" transform="translate(9.52 11.43)">
+        <path d="M40 360H120V280H200V200H280V120H360"/>
+        <path d="M215 150 330 40M255 40H330V115"/>
+    </g>
+    <g stroke="#FFF9FA" stroke-width="32.38">
+        <path d="M40 360H120V280H200V200H280V120H360"/>
+        <path d="M215 150 330 40M255 40H330V115"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1200" width="900" height="1200">
+  <!-- ByteX illustration "role-technical". Colours: #FD1843 (True Pink), #FFF9FA (Chill White). -->
+  <defs>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.65">
+      <stop offset="0" stop-color="#FD1843" stop-opacity=".55"/>
+      <stop offset=".45" stop-color="#FD1843" stop-opacity=".16"/>
+      <stop offset="1" stop-color="#FD1843" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M60 0H0V60" fill="none" stroke="#FFF9FA" stroke-opacity=".05" stroke-width="2"/>
+    </pattern>
+  </defs>
+  <rect width="900" height="1200" fill="#1B1B1B"/>
+  <rect width="900" height="1200" fill="url(#grid)"/>
+  <rect width="900" height="1200" fill="url(#glow)"/>
+  <g transform="translate(250.0 328.0) scale(1.0)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <g stroke="#8F0A26" stroke-width="34.00" transform="translate(10.00 12.00)">
+        <rect x="105" y="105" width="190" height="190" rx="30"/>
+        <rect x="160" y="160" width="80" height="80" rx="14"/>
+        <path d="M150 105V45M200 105V45M250 105V45M150 295V355M200 295V355M250 295V355M105 150H45M105 200H45M105 250H45M295 150H355M295 200H355M295 250H355"/>
+    </g>
+    <g stroke="#FFF9FA" stroke-width="34.00">
+        <rect x="105" y="105" width="190" height="190" rx="30"/>
+        <rect x="160" y="160" width="80" height="80" rx="14"/>
+        <path d="M150 105V45M200 105V45M250 105V45M150 295V355M200 295V355M250 295V355M105 150H45M105 200H45M105 250H45M295 150H355M295 200H355M295 250H355"/>
+    </g>
+  </g>
+</svg>

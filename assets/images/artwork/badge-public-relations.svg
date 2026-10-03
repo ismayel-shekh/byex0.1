@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240">
+  <!-- ByteX role badge "role-public-relations" (placeholder until a real photo is added). -->
+  <rect width="240" height="240" fill="#FD1843"/>
+  <g transform="translate(48.0 48.0) scale(0.3600)" fill="none" stroke="#FFF9FA"
+     stroke-width="30.56" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M70 55H230Q270 55 270 95V165Q270 205 230 205H130L75 250V205H70Q30 205 30 165V95Q30 55 70 55Z"/>
+        <path fill="#FD1843" d="M170 175H330Q370 175 370 215V285Q370 325 330 325H325V370L270 325H170Q130 325 130 285V215Q130 175 170 175Z"/>
+  </g>
+</svg>

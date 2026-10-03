@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240">
+  <!-- ByteX role badge "role-marketing" (placeholder until a real photo is added). -->
+  <rect width="240" height="240" fill="#FD1843"/>
+  <g transform="translate(48.0 48.0) scale(0.3600)" fill="none" stroke="#FFF9FA"
+     stroke-width="30.56" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M45 160H115L285 70V330L115 240H45Z"/>
+        <path d="M95 240 120 340"/>
+        <path d="M335 150Q365 200 335 250"/>
+  </g>
+</svg>

@@ -1,0 +1,1776 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+  =============================================================================
+  BYTEX WEBSITE — index.html (the only page)
+  =============================================================================
+  HOW TO EDIT (read EDITING-GUIDE.md for the full section map)
+    1. TEXT:   change the words between tags; keep the tags and their classes.
+    2. IMAGES: put the file in assets/images/, change src, describe it in alt.
+    3. LINKS:  href="#about" scrolls to the element with id="about".
+    4. MENUS:  there are TWO menus (desktop + full-screen/mobile). Edit both.
+    5. KEEP:   class, id and data-... attributes. Scripts and styles use them.
+    6. STYLES: assets/css/bytex.css     BEHAVIOUR: assets/js/main.js
+  Search this file for "EDIT" to jump between editable spots.
+
+  Section IDs on this page (used by menu links):
+    #top  #home  #solutions  #about  #services  #team  #approach
+    #vision  #leadership  #roadmap  #contact
+  =============================================================================
+-->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- EDIT: browser-tab title and search-engine description. -->
+    <title>ByteX — Technology, Innovation &amp; Solutions at AIU, Malaysia</title>
+    <meta name="description" content="ByteX is a student-led technology, innovation and solutions initiative at Albukhary International University (AIU), Malaysia, offering simple, affordable digital services.">
+
+    <!-- Light/dark browser UI colour. -->
+    <meta name="theme-color" content="#161616">
+
+    <!-- EDIT: tab icon and phone home-screen icon (made from the ByteX icon). -->
+    <link rel="icon" href="assets/images/brand/favicon-32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="assets/images/brand/favicon-192.png" type="image/png" sizes="192x192">
+    <link rel="apple-touch-icon" href="assets/images/brand/apple-touch-icon.png">
+
+    <!-- KEEP THIS ORDER: template design first, then ByteX styles (which win). -->
+    <link rel="stylesheet" href="assets/css/template.css">
+    <link rel="stylesheet" href="assets/css/bytex.css">
+  </head>
+
+  <body class="home site-theme" id="top">
+
+    <!-- ===================================================================
+         START: Loading screen
+         EDIT: the word shown while the page loads (lowercase looks best).
+         KEEP: class "load-text" and the svg path id="svg" (used by main.js).
+         =================================================================== -->
+    <div class="loader-wrap" aria-hidden="true">
+      <svg viewBox="0 0 1000 1000" preserveAspectRatio="none"><path id="svg" d="M0,1005S175,995,500,995s500,5,500,5V0H0Z"></path></svg>
+      <div class="loader-wrap-heading">
+        <div class="load-text">bytex</div>
+      </div>
+    </div>
+    <!-- END: Loading screen -->
+
+    <!-- Desktop mouse cursor and background blur (decorative, used by main.js). -->
+    <div class="cursor" aria-hidden="true"></div>
+    <div class="blur-div" aria-hidden="true"></div>
+
+    <!-- Back-to-top button (bottom right). KEEP role, tabindex and aria-label for keyboard users. -->
+    <div class="progress-wrap cursor-pointer" role="button" tabindex="0" aria-label="Back to top">
+      <svg class="progress-circle" width="100%" height="100%" viewBox="-1 -1 102 102" aria-hidden="true"><path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"></path></svg>
+    </div>
+
+
+    <!-- ===================================================================
+         START: Header
+         Contains: logo, desktop menu, theme button, menu button and the
+         full-screen/mobile menu. Menu labels appear in TWO places — edit both.
+         =================================================================== -->
+    <div class="navbar navbar-expand-lg">
+      <div class="page-layout header-layout">
+        <div class="layout-block header-row layout-flex layout-boxed layout-container layout-parent layout-loaded">
+          <div class="layout-inner">
+
+            <!-- Header logo. Two images: one per theme.
+                 KEEP classes "logo-light" (shown on the DARK theme) and "logo-dark" (shown on the LIGHT theme). -->
+            <div class="layout-block header-logo-column layout-full layout-flex layout-container layout-loaded">
+              <div class="layout-block header-logo widget-width-initial widget">
+                <div class="widget-content">
+                  <a href="#top" class="logo" aria-label="ByteX — back to top">
+                    <!-- EDIT: white logo for the dark theme. -->
+                    <img src="assets/images/brand/bytex-logo-white-transparent.png" alt="ByteX" class="logo-light" width="600" height="212" decoding="async" loading="eager">
+                    <!-- EDIT: pink logo for the light theme. -->
+                    <img src="assets/images/brand/bytex-logo-red-transparent.png" alt="ByteX" class="logo-dark" width="600" height="220" decoding="async" loading="eager">
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- START: Desktop navigation
+                 EDIT: labels and href values. Items with a submenu open on hover/focus.
+                 Mirror every change in the full-screen/mobile menu further down. -->
+            <div class="layout-block header-menu-column layout-full layout-flex layout-container layout-loaded">
+              <div class="layout-block header-menu widget">
+                <div class="widget-content">
+                  <div class="navbar-expand-lg">
+                    <div class="collapse navbar-collapse justify-content-center">
+                      <ul id="menu-top-menu" class="navbar-nav" aria-label="Main navigation">
+                        <li class="current-menu-item menu-item-has-children nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#top"><span class="rolling-text">Home</span></a>
+                          <ul class="sub-menu dropdown-menu">
+                            <li><a class="nav-link dropdown-item" href="#top">Back to top</a></li>
+                            <li><a class="nav-link dropdown-item" href="#solutions">What we offer</a></li>
+                            <li><a class="nav-link dropdown-item" href="#vision">Why ByteX</a></li>
+                          </ul>
+                        </li>
+                        <li class="menu-item-has-children nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#about"><span class="rolling-text">About</span></a>
+                          <ul class="sub-menu dropdown-menu">
+                            <li><a class="nav-link dropdown-item" href="#about">About ByteX</a></li>
+                            <li><a class="nav-link dropdown-item" href="#team">Our team</a></li>
+                            <li><a class="nav-link dropdown-item" href="#leadership">Leadership</a></li>
+                            <li><a class="nav-link dropdown-item" href="#approach">Our approach</a></li>
+                          </ul>
+                        </li>
+                        <li class="menu-item-has-children nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#services"><span class="rolling-text">Services</span></a>
+                          <ul class="sub-menu dropdown-menu">
+                            <li><a class="nav-link dropdown-item" href="#services">Our services</a></li>
+                            <li><a class="nav-link dropdown-item" href="#solutions">What we offer</a></li>
+                          </ul>
+                        </li>
+                        <li class="menu-item-has-children nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#roadmap"><span class="rolling-text">Roadmap</span></a>
+                          <ul class="sub-menu dropdown-menu">
+                            <li><a class="nav-link dropdown-item" href="#roadmap">Short-term priorities</a></li>
+                            <li><a class="nav-link dropdown-item" href="#vision">Vision &amp; purpose</a></li>
+                          </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="#contact"><span class="rolling-text">Contact</span></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- END: Desktop navigation -->
+
+            <div class="layout-block header-actions layout-full layout-flex layout-container layout-loaded">
+
+              <!-- Theme button (dark/light). KEEP class "theme-icon"; main.js updates its aria attributes. -->
+              <div class="layout-block header-theme-toggle widget">
+                <div class="widget-content">
+                  <div class="dark-mode-icon">
+                    <button type="button" class="theme-icon" aria-label="Switch to light theme" aria-pressed="false">
+                      <i aria-hidden="true" class="far fa-moon moon"></i>
+                      <i aria-hidden="true" class="far fa-sun sun"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Menu button (three lines). KEEP its classes, aria-controls and aria-expanded. -->
+              <div class="layout-block header-menu-toggle widget">
+                <div class="widget-content">
+                  <div class="topnav ml-auto">
+                    <div class="menu-icon navbar-menu-btn cursor-pointer" role="button" tabindex="0" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navigation-panel">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 50 50" aria-hidden="true"><path d="M 3 9 A 1.0001 1.0001 0 1 0 3 11 L 47 11 A 1.0001 1.0001 0 1 0 47 9 L 3 9 z M 3 24 A 1.0001 1.0001 0 1 0 3 26 L 47 26 A 1.0001 1.0001 0 1 0 47 24 L 3 24 z M 3 39 A 1.0001 1.0001 0 1 0 3 41 L 47 41 A 1.0001 1.0001 0 1 0 47 39 L 3 39 z"></path></svg>
+                    </div>
+                  </div>
+
+                  <!-- START: Full-screen / mobile menu
+                       KEEP: id="navigation-panel", aria-hidden and inert (main.js opens/closes it). -->
+                  <div class="hamenu" id="navigation-panel" aria-label="Navigation menu" aria-hidden="true" inert="">
+                    <div class="close-menu cursor-pointer" role="button" tabindex="0" aria-label="Close navigation menu">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 50 50" aria-hidden="true"><path d="M 9.15625 6.3125 L 6.3125 9.15625 L 22.15625 25 L 6.21875 40.96875 L 9.03125 43.78125 L 25 27.84375 L 40.9375 43.78125 L 43.78125 40.9375 L 27.84375 25 L 43.6875 9.15625 L 40.84375 6.3125 L 25 22.15625 Z"></path></svg>
+                    </div>
+                    <div class="d-flex">
+                      <div class="menu-links">
+                        <!-- EDIT: same items as the desktop menu. For each top item, also change data-text to match its label. -->
+                        <ul id="menu-top-menu-1" class="main-menu rest">
+                          <li class="current-menu-item menu-item-has-children">
+                            <a class="link dmenu dmenu-children" href="#top"><span class="fill-text" data-text="Home">Home</span><i></i></a>
+                            <ul class="sub-menu">
+                              <li><a href="#top">Back to top</a></li>
+                              <li><a href="#solutions">What we offer</a></li>
+                              <li><a href="#vision">Why ByteX</a></li>
+                            </ul>
+                          </li>
+                          <li class="menu-item-has-children">
+                            <a class="link dmenu dmenu-children" href="#about"><span class="fill-text" data-text="About">About</span><i></i></a>
+                            <ul class="sub-menu">
+                              <li><a href="#about">About ByteX</a></li>
+                              <li><a href="#team">Our team</a></li>
+                              <li><a href="#leadership">Leadership</a></li>
+                              <li><a href="#approach">Our approach</a></li>
+                            </ul>
+                          </li>
+                          <li class="menu-item-has-children">
+                            <a class="link dmenu dmenu-children" href="#services"><span class="fill-text" data-text="Services">Services</span><i></i></a>
+                            <ul class="sub-menu">
+                              <li><a href="#services">Our services</a></li>
+                              <li><a href="#solutions">What we offer</a></li>
+                            </ul>
+                          </li>
+                          <li class="menu-item-has-children">
+                            <a class="link dmenu dmenu-children" href="#roadmap"><span class="fill-text" data-text="Roadmap">Roadmap</span><i></i></a>
+                            <ul class="sub-menu">
+                              <li><a href="#roadmap">Short-term priorities</a></li>
+                              <li><a href="#vision">Vision &amp; purpose</a></li>
+                            </ul>
+                          </li>
+                          <li><a class="link dmenu" href="#contact"><span class="fill-text" data-text="Contact">Contact</span></a></li>
+                        </ul>
+                      </div>
+
+                      <!-- Menu side panel (hidden on small screens). EDIT: text, image and contact details. -->
+                      <div class="cont-info md-hide">
+                        <div class="trans">
+                          <div class="mil-text">
+                            <div>ByteX is a student-led technology, innovation and solutions initiative at Albukhary International University (AIU), Malaysia.</div>
+                          </div>
+                          <div class="fit-img h-250px o-hidden mt-30px">
+                            <!-- EDIT: panel image. This is the supplied ByteX logo artwork. -->
+                            <img src="assets/images/brand/bytex-logo-red-panel.jpg" alt="ByteX logo" width="1536" height="1024" decoding="async" loading="lazy">
+                          </div>
+                          <div class="row">
+                            <div class="col-md-7">
+                              <div class="item mt-30px">
+                                <div class="fs-14 text-uppercase opacity-7 mb-20px"><span> Find us </span></div>
+                                <!-- EDIT CONTACT DETAILS: these also appear in the footer. Keep both copies the same. -->
+                                <div class="h6 menu-contact-line">
+                                  <div>
+                                    AIU, Malaysia<br>
+                                    <a href="mailto:bytex.my@gmail.com">bytex.my@gmail.com</a><br>
+                                    <a href="https://www.bytex.my" target="_blank" rel="noopener noreferrer">www.bytex.my</a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-5">
+                              <div class="item mt-30px text-align-right">
+                                <!-- EDIT SOCIAL LINKS (also in the footer). Facebook is not listed because no page URL has been supplied yet. -->
+                                <ul class="rest">
+                                  <li class="hover-this cursor-pointer mb-10px">
+                                    <a target="_blank" href="https://www.instagram.com/bytex.my/" class="hover-anim" rel="noopener noreferrer"><span> Instagram </span></a>
+                                  </li>
+                                  <li class="hover-this cursor-pointer mb-10px">
+                                    <a href="mailto:bytex.my@gmail.com" class="hover-anim"><span> Email </span></a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- END: Full-screen / mobile menu -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END: Header -->
+
+
+    <!-- KEEP: smooth-wrapper / smooth-content are required by the smooth-scroll library. -->
+    <div id="smooth-wrapper" class="mil-wrapper" data-smooth-scroll="1">
+      <div id="smooth-content">
+        <main>
+          <div class="page-layout home-page">
+
+            <!-- ===============================================================
+                 START: Hero section (#home)
+                 =============================================================== -->
+            <div class="layout-block hero-section layout-flex layout-boxed layout-container layout-parent layout-loaded" id="home">
+              <div class="layout-inner">
+
+                <!-- Background patterns: one file per theme. Decorative; edit the url(...) path to change. -->
+                <div class="layout-block hero-background ui-absolute widget" aria-hidden="true">
+                  <div class="widget-content">
+                    <div class="hero-bg hero-bg-light hero-bg-animate" style="background-image: url('assets/images/decor/pattern-bg-2.png');"></div>
+                    <div class="hero-bg hero-bg-animate" style="background-image: url('assets/images/decor/pattern-bg.webp');"></div>
+                  </div>
+                </div>
+
+                <div class="layout-block hero-content layout-full layout-flex layout-container layout-loaded">
+                  <div class="layout-block hero-heading-column layout-full layout-flex layout-container layout-loaded">
+                    <!-- EDIT: main headline. Keep the inner span with "underline" for the pink underlined phrase. -->
+                    <div class="layout-block hero-heading widget">
+                      <div class="widget-content">
+                        <h1 class="mil-title hero-animate">
+                          <span> Technology that solves real problems &amp; <span class="opacity-5 underline d-inline">creates opportunities</span>. </span>
+                        </h1>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="layout-block hero-details-row layout-full layout-flex layout-container layout-loaded">
+                    <!-- EDIT: the four rounded tags. Each is a link to a section on this page. -->
+                    <div class="layout-block hero-tags-column layout-full layout-flex layout-container layout-loaded">
+                      <div class="layout-block hero-tags widget">
+                        <div class="widget-content">
+                          <div class="tags-style1 hero-animate">
+                            <a href="#services"> Web &amp; Digital Services </a>
+                            <a href="#solutions"> Domain &amp; Hosting Support </a>
+                            <a href="#solutions"> Automation Tools </a>
+                            <a href="#approach"> Student Opportunities </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Rotating circle. EDIT: the words in <textPath>. Keep the path id "textcircle". -->
+                    <div class="layout-block hero-circle-column layout-full layout-flex layout-container layout-loaded">
+                      <div class="layout-block hero-circle widget">
+                        <div class="widget-content">
+                          <div class="circle-button hero-animate" aria-hidden="true">
+                            <div class="rotate-circle fs-24 text-uppercase">
+                              <svg class="textcircle" viewBox="0 0 500 500">
+                                <defs><path id="textcircle" d="M250,400 a150,150 0 0,1 0,-300a150,150 0 0,1 0,300Z"></path></defs>
+                                <text><textPath xlink:href="#textcircle" textLength="900">Technology - Innovation - Solutions -</textPath></text>
+                              </svg>
+                            </div>
+                            <div class="icon text-align-center">
+                              <div class="w-80px"><img src="assets/images/decor/shape-sm-pink.png" alt="" width="400" height="424" decoding="async" loading="eager"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="layout-block hero-description-column layout-full layout-flex layout-container layout-loaded">
+                      <!-- EDIT: short introduction. -->
+                      <div class="layout-block hero-description widget">
+                        <div class="widget-content">
+                          <div class="mil-text hero-animate">
+                            <div><p>ByteX is a student-led technology, innovation and solutions initiative at Albukhary International University (AIU). We build simple, affordable digital solutions for people without a technical background.</p></div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- EDIT: button label and destination. -->
+                      <div class="layout-block hero-about-button widget">
+                        <div class="widget-content">
+                          <div class="hero-animate">
+                            <a href="#about" class="text-uppercase fs-14 fw-500 butn-arrow">
+                              <span>Know more</span>
+                              <span class="arrow-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"></path></svg>
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"></path></svg>
+                              </span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- END: Hero section -->
+
+
+            <!-- ===============================================================
+                 START: Solutions — horizontal cards (#solutions)
+                 On wide screens these cards move sideways while scrolling.
+                 To add a card, copy one complete "SOLUTION CARD" block.
+                 KEEP: classes hr-container and item-panel (used by main.js).
+                 =============================================================== -->
+            <div class="layout-block portfolio-section layout-full layout-flex layout-container layout-parent layout-loaded" id="solutions">
+              <div class="layout-block portfolio-widget widget">
+                <div class="widget-content">
+                  <div class="hr-sec p-0">
+                    <div class="hr-container row">
+
+                      <!-- SOLUTION CARD 1: Portfolio and personal websites.
+                           EDIT: image src/alt, the two tag words, the title text and BOTH href values (image link + title link). -->
+                      <div class="item-panel col-12 col-md-6 md-mb30 hero-animate">
+                        <div class="fit-img">
+                          <a href="#services">
+                            <img src="assets/images/artwork/solution-portfolio-websites.svg" alt="Portfolio and personal websites" width="1200" height="1200" decoding="async" loading="lazy">
+                          </a>
+                          <div class="cont">
+                            <!-- Tags appear when the card is hovered. -->
+                            <div class="tags fs-14 text-uppercase"><span>Web</span><span>Digital</span></div>
+                            <a href="#services" class="butn-arrow butn-blur">
+                              <span class="text-uppercase fs-16 fw-500">Portfolio &amp; personal websites</span>
+                              <span class="arrow-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"></path></svg>
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"></path></svg>
+                              </span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- SOLUTION CARD 2: Business and organisational websites.
+                           EDIT: image src/alt, the two tag words, the title text and BOTH href values (image link + title link). -->
+                      <div class="item-panel col-12 col-md-6 md-mb30 hero-animate">
+                        <div class="fit-img">
+                          <a href="#services">
+                            <img src="assets/images/artwork/solution-business-websites.svg" alt="Business and organisational websites" width="1200" height="1200" decoding="async" loading="lazy">
+                          </a>
+                          <div class="cont">
+                            <!-- Tags appear when the card is hovered. -->
+                            <div class="tags fs-14 text-uppercase"><span>Web</span><span>Digital</span></div>
+                            <a href="#services" class="butn-arrow butn-blur">
+                              <span class="text-uppercase fs-16 fw-500">Business &amp; organisation websites</span>
+                              <span class="arrow-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"></path></svg>
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"></path></svg>
+                              </span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- SOLUTION CARD 3: Domain and hosting support.
+                           EDIT: image src/alt, the two tag words, the title text and BOTH href values (image link + title link). -->
+                      <div class="item-panel col-12 col-md-6 md-mb30 hero-animate">
+                        <div class="fit-img">
+                          <a href="#services">
+                            <img src="assets/images/artwork/solution-domain-hosting.svg" alt="Domain and hosting support" width="1200" height="1200" decoding="async" loading="lazy">
+                          </a>
+                          <div class="cont">
+                            <!-- Tags appear when the card is hovered. -->
+                            <div class="tags fs-14 text-uppercase"><span>Hosting</span><span>Support</span></div>
+                            <a href="#services" class="butn-arrow butn-blur">
+                              <span class="text-uppercase fs-16 fw-500">Domain &amp; hosting support</span>
+                              <span class="arrow-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"></path></svg>
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"></path></svg>
+                              </span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- SOLUTION CARD 4: Website deployment and maintenance.
+                           EDIT: image src/alt, the two tag words, the title text and BOTH href values (image link + title link). -->
+                      <div class="item-panel col-12 col-md-6 md-mb30 hero-animate">
+                        <div class="fit-img">
+                          <a href="#services">
+                            <img src="assets/images/artwork/solution-deployment-maintenance.svg" alt="Website deployment and maintenance" width="1200" height="1200" decoding="async" loading="lazy">
+                          </a>
+                          <div class="cont">
+                            <!-- Tags appear when the card is hovered. -->
+                            <div class="tags fs-14 text-uppercase"><span>Web</span><span>Support</span></div>
+                            <a href="#services" class="butn-arrow butn-blur">
+                              <span class="text-uppercase fs-16 fw-500">Deployment &amp; maintenance</span>
+                              <span class="arrow-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"></path></svg>
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"></path></svg>
+                              </span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- SOLUTION CARD 5: Receipt generator, a proposed tool. This tool is PROPOSED: keep "(proposed)" in its title until it is actually available.
+                           EDIT: image src/alt, the two tag words, the title text and BOTH href values (image link + title link). -->
+                      <div class="item-panel col-12 col-md-6 md-mb30 hero-animate">
+                        <div class="fit-img">
+                          <a href="#services">
+                            <img src="assets/images/artwork/solution-receipt-generator.svg" alt="Receipt generator, a proposed tool" width="1200" height="1200" decoding="async" loading="lazy">
+                          </a>
+                          <div class="cont">
+                            <!-- Tags appear when the card is hovered. -->
+                            <div class="tags fs-14 text-uppercase"><span class="tag-proposed">Proposed</span><span>Automation</span></div>
+                            <a href="#services" class="butn-arrow butn-blur">
+                              <span class="text-uppercase fs-16 fw-500">Receipt generator (proposed)</span>
+                              <span class="arrow-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"></path></svg>
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"></path></svg>
+                              </span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- SOLUTION CARD 6: Certificate generator, a proposed tool. This tool is PROPOSED: keep "(proposed)" in its title until it is actually available.
+                           EDIT: image src/alt, the two tag words, the title text and BOTH href values (image link + title link). -->
+                      <div class="item-panel col-12 col-md-6 md-mb30 hero-animate">
+                        <div class="fit-img">
+                          <a href="#services">
+                            <img src="assets/images/artwork/solution-certificate-generator.svg" alt="Certificate generator, a proposed tool" width="1200" height="1200" decoding="async" loading="lazy">
+                          </a>
+                          <div class="cont">
+                            <!-- Tags appear when the card is hovered. -->
+                            <div class="tags fs-14 text-uppercase"><span class="tag-proposed">Proposed</span><span>Automation</span></div>
+                            <a href="#services" class="butn-arrow butn-blur">
+                              <span class="text-uppercase fs-16 fw-500">Certificate generator (proposed)</span>
+                              <span class="arrow-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"></path></svg>
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"></path></svg>
+                              </span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- SOLUTION CARD 7: Fund and expense manager, a proposed tool. This tool is PROPOSED: keep "(proposed)" in its title until it is actually available.
+                           EDIT: image src/alt, the two tag words, the title text and BOTH href values (image link + title link). -->
+                      <div class="item-panel col-12 col-md-6 md-mb30 hero-animate">
+                        <div class="fit-img">
+                          <a href="#services">
+                            <img src="assets/images/artwork/solution-fund-expense-manager.svg" alt="Fund and expense manager, a proposed tool" width="1200" height="1200" decoding="async" loading="lazy">
+                          </a>
+                          <div class="cont">
+                            <!-- Tags appear when the card is hovered. -->
+                            <div class="tags fs-14 text-uppercase"><span class="tag-proposed">Proposed</span><span>Management</span></div>
+                            <a href="#services" class="butn-arrow butn-blur">
+                              <span class="text-uppercase fs-16 fw-500">Fund / expense manager (proposed)</span>
+                              <span class="arrow-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"></path></svg>
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"></path></svg>
+                              </span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- SOLUTION CARD 8: Customised digital solutions.
+                           EDIT: image src/alt, the two tag words, the title text and BOTH href values (image link + title link). -->
+                      <div class="item-panel col-12 col-md-6 md-mb30 hero-animate">
+                        <div class="fit-img">
+                          <a href="#services">
+                            <img src="assets/images/artwork/solution-custom-solutions.svg" alt="Customised digital solutions" width="1200" height="1200" decoding="async" loading="lazy">
+                          </a>
+                          <div class="cont">
+                            <!-- Tags appear when the card is hovered. -->
+                            <div class="tags fs-14 text-uppercase"><span>Custom</span><span>Your needs</span></div>
+                            <a href="#services" class="butn-arrow butn-blur">
+                              <span class="text-uppercase fs-16 fw-500">Customised digital solutions</span>
+                              <span class="arrow-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"></path></svg>
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"></path></svg>
+                              </span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- LAST CARD: a pink call-to-action, not a service. EDIT its words and href. -->
+                      <div class="item-panel col-12 col-md-6 md-mb30">
+                        <div class="see-more main-colorbg border-radius-30px d-flex align-items-center justify-content-center text-align-center">
+                          <div class="h2 text-uppercase text-dark"><a href="#contact"> { Start a project } </a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- END: Solutions -->
+
+
+            <!-- ===============================================================
+                 START: About (#about)
+                 =============================================================== -->
+            <div class="layout-block about-section layout-flex layout-boxed layout-container layout-parent layout-loaded" id="about">
+              <div class="layout-inner">
+                <div class="layout-block about-background widget" aria-hidden="true">
+                  <div class="widget-content">
+                    <div class="position-relative">
+                      <div class="w-300px opacity-1 shape-top-right"><img src="assets/images/decor/mshap1.png" alt="" data-speed="0.9" data-lag="0" width="678" height="702" decoding="async" loading="lazy"></div>
+                    </div>
+                  </div>
+                </div>
+                <!-- EDIT: small section label. -->
+                <div class="layout-block about-label-column layout-full layout-flex layout-container layout-loaded">
+                  <div class="layout-block about-label widget">
+                    <div class="widget-content">
+                      <div class="sec-head">
+                        <div class="h6 text-uppercase"><span> About ByteX </span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- EDIT: about statement. -->
+                <div class="layout-block about-copy-column layout-full layout-flex layout-container layout-loaded">
+                  <div class="layout-block about-copy widget-width-initial widget">
+                    <div class="widget-content">
+                      <h2 class="mil-title"><span> We use technology to solve practical problems, provide affordable digital solutions and give students real-world experience. We are starting within the AIU community, with the long-term goal of growing beyond it. </span></h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- END: About -->
+
+
+            <!-- ===============================================================
+                 START: Services (#services) — three cards
+                 =============================================================== -->
+            <div class="layout-block services-section layout-flex layout-boxed layout-container layout-parent layout-loaded" id="services">
+              <div class="layout-inner">
+                <div class="layout-block services-heading-row layout-full layout-flex layout-container layout-loaded">
+                  <div class="layout-block services-heading-group layout-full sec-head bord layout-flex layout-container layout-loaded">
+                    <div class="layout-block services-label-column layout-full layout-flex layout-container layout-loaded">
+                      <div class="layout-block services-label widget">
+                        <div class="widget-content">
+                          <div class="sec-head">
+                            <div class="h6 text-uppercase"><span> Services </span></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- EDIT: heading. The first word is in a lighter span. -->
+                    <div class="layout-block services-title-column layout-full layout-flex layout-container layout-loaded">
+                      <div class="layout-block services-title widget">
+                        <div class="widget-content">
+                          <h2 class="mil-title h2-lg"><span> <span class="opacity-7 d-inline">Our</span> initial services. </span></h2>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- EDIT: small link at the right of the heading. -->
+                    <div class="layout-block services-link-column layout-full layout-flex layout-container layout-loaded">
+                      <div class="layout-block services-link widget">
+                        <div class="widget-content">
+                          <div>
+                            <a href="#solutions" class="text-uppercase fs-14 fw-500 butn-more d-flex align-items-center">
+                              <span>See all</span>
+                              <span class="arrow-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"></path></svg>
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"></path></svg>
+                              </span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="layout-block services-cards-row layout-full layout-flex layout-container layout-loaded">
+
+                  <!-- SERVICE CARD 1. EDIT: decorative image, title, paragraph, button label and href. -->
+                  <div class="layout-block service-marketing-column layout-full layout-flex layout-container layout-loaded">
+                    <div class="layout-block service-marketing widget">
+                      <div class="widget-content">
+                        <div class="serv-style4" data-ui-animate="" data-delay="0.2">
+                          <div class="item v-align-between">
+                            <div class="img" aria-hidden="true"><img src="assets/images/decor/mshap1.png" alt="" width="678" height="702" decoding="async" loading="lazy"></div>
+                            <div>
+                              <h3 class="h4 mb-30px"><span> Web &amp; Digital Services </span></h3>
+                              <div class="mil-text">
+                                <div><p>Portfolio and personal websites, basic business and organisational websites, domain and hosting support, plus website deployment and maintenance.</p></div>
+                              </div>
+                            </div>
+                            <div>
+                              <a href="#solutions" class="butn-more d-inline-flex align-items-center">
+                                <span class="text-uppercase fs-14 fw-500"> See details </span>
+                                <span class="arrow-icon" aria-hidden="true">
+                                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"></path></svg>
+                                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"></path></svg>
+                                </span>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- SERVICE CARD 2 (light card). These tools are PROPOSED — keep that clear in the text. -->
+                  <div class="layout-block service-branding-column layout-full layout-flex layout-container layout-loaded">
+                    <div class="layout-block service-branding widget">
+                      <div class="widget-content">
+                        <div class="serv-style4" data-ui-animate="" data-delay="0.3">
+                          <div class="item v-align-between bg-light">
+                            <div class="img" aria-hidden="true"><img src="assets/images/decor/bs2.png" alt="" width="1160" height="1160" decoding="async" loading="lazy"></div>
+                            <div>
+                              <h3 class="h4 mb-30px"><span> Automation &amp; Management </span></h3>
+                              <div class="mil-text">
+                                <div><p>Proposed tools for everyday admin work: a receipt generator, a certificate generator and a fund/expense manager. They are planned and not yet available.</p></div>
+                              </div>
+                            </div>
+                            <div>
+                              <a href="#solutions" class="butn-more d-inline-flex align-items-center">
+                                <span class="text-uppercase fs-14 fw-500"> See details </span>
+                                <span class="arrow-icon" aria-hidden="true">
+                                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"></path></svg>
+                                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"></path></svg>
+                                </span>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- SERVICE CARD 3. -->
+                  <div class="layout-block service-seo-column layout-full layout-flex layout-container layout-loaded">
+                    <div class="layout-block service-seo widget">
+                      <div class="widget-content">
+                        <div class="serv-style4" data-ui-animate="" data-delay="0.4">
+                          <div class="item v-align-between">
+                            <div class="img" aria-hidden="true"><img src="assets/images/decor/bs3.png" alt="" width="679" height="684" decoding="async" loading="lazy"></div>
+                            <div>
+                              <h3 class="h4 mb-30px"><span> Customised Solutions </span></h3>
+                              <div class="mil-text">
+                                <div><p>Digital solutions shaped around your needs. We start by understanding the real problem, then build something genuinely useful.</p></div>
+                              </div>
+                            </div>
+                            <div>
+                              <a href="#contact" class="butn-more d-inline-flex align-items-center">
+                                <span class="text-uppercase fs-14 fw-500"> Discuss an idea </span>
+                                <span class="arrow-icon" aria-hidden="true">
+                                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"></path></svg>
+                                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"></path></svg>
+                                </span>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- END: Services -->
+
+
+            <!-- ===============================================================
+                 START: Moving words (marquee) under Services
+                 EDIT: the words in the "data" below appear in BOTH tracks.
+                 Change them in both tracks so the loop stays seamless.
+                 =============================================================== -->
+            <div class="layout-block agency-marquee-section layout-full layout-flex layout-container layout-parent layout-loaded">
+              <div class="layout-block agency-marquee widget">
+                <div class="widget-content">
+                  <div class="main-marq xlrg with-shad" aria-hidden="true">
+                    <div class="slide-har st1 opacity-5">
+                      <!-- Track 1 -->
+                      <div class="box d-flex align-items-center">
+                        <div class="item">
+                          <div class="h4"><a><span> Technology </span></a></div>
+                        </div>
+                        <div class="item">
+                          <div class="w-70px"><img src="assets/images/decor/star.svg" alt="" decoding="async" loading="lazy"></div>
+                        </div>
+                        <div class="item">
+                          <div class="h4"><a><span> Innovation </span></a></div>
+                        </div>
+                        <div class="item">
+                          <div class="w-70px"><img src="assets/images/decor/star.svg" alt="" decoding="async" loading="lazy"></div>
+                        </div>
+                        <div class="item">
+                          <div class="h4"><a><span> Solutions </span></a></div>
+                        </div>
+                        <div class="item">
+                          <div class="w-70px"><img src="assets/images/decor/star.svg" alt="" decoding="async" loading="lazy"></div>
+                        </div>
+                        <div class="item">
+                          <div class="h4"><a><span> Opportunities </span></a></div>
+                        </div>
+                        <div class="item">
+                          <div class="w-70px"><img src="assets/images/decor/star.svg" alt="" decoding="async" loading="lazy"></div>
+                        </div>
+                        <div class="item">
+                          <div class="h4"><a><span> Student-led </span></a></div>
+                        </div>
+                        <div class="item">
+                          <div class="w-70px"><img src="assets/images/decor/star.svg" alt="" decoding="async" loading="lazy"></div>
+                        </div>
+                      </div>
+                      <!-- Track 2: an exact copy of track 1 (needed for the seamless loop). -->
+                      <div class="box d-flex align-items-center">
+                        <div class="item">
+                          <div class="h4"><a><span> Technology </span></a></div>
+                        </div>
+                        <div class="item">
+                          <div class="w-70px"><img src="assets/images/decor/star.svg" alt="" decoding="async" loading="lazy"></div>
+                        </div>
+                        <div class="item">
+                          <div class="h4"><a><span> Innovation </span></a></div>
+                        </div>
+                        <div class="item">
+                          <div class="w-70px"><img src="assets/images/decor/star.svg" alt="" decoding="async" loading="lazy"></div>
+                        </div>
+                        <div class="item">
+                          <div class="h4"><a><span> Solutions </span></a></div>
+                        </div>
+                        <div class="item">
+                          <div class="w-70px"><img src="assets/images/decor/star.svg" alt="" decoding="async" loading="lazy"></div>
+                        </div>
+                        <div class="item">
+                          <div class="h4"><a><span> Opportunities </span></a></div>
+                        </div>
+                        <div class="item">
+                          <div class="w-70px"><img src="assets/images/decor/star.svg" alt="" decoding="async" loading="lazy"></div>
+                        </div>
+                        <div class="item">
+                          <div class="h4"><a><span> Student-led </span></a></div>
+                        </div>
+                        <div class="item">
+                          <div class="w-70px"><img src="assets/images/decor/star.svg" alt="" decoding="async" loading="lazy"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- END: Moving words -->
+
+
+            <!-- ===============================================================
+                 START: Team (#team) — introduction, mission box, image panel, numbers
+                 =============================================================== -->
+            <div class="layout-block team-section layout-flex layout-boxed layout-container layout-parent layout-loaded" id="team">
+              <div class="layout-inner">
+                <div class="layout-block team-heading-row layout-full layout-flex layout-container layout-loaded">
+                  <div class="layout-block team-heading-group layout-full sec-head bord layout-flex layout-container layout-loaded">
+                    <div class="layout-block team-label-column layout-full layout-flex layout-container layout-loaded">
+                      <div class="layout-block team-label widget">
+                        <div class="widget-content">
+                          <div class="sec-head">
+                            <div class="h6 text-uppercase"><span> Our Team </span></div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Small round images: role icons (placeholders until real photos are added).
+                           EDIT: replace src with a photo (square works best) and set alt to the person's name.
+                           The last circle links to the full leadership list. -->
+                      <div class="layout-block team-count widget">
+                        <div class="widget-content">
+                          <div class="user-imgs">
+                            <div class="fit-img"><img src="assets/images/artwork/badge-coordinator.svg" alt="Lead Coordinator" width="240" height="240" decoding="async" loading="lazy"></div>
+                            <div class="fit-img"><img src="assets/images/artwork/badge-development.svg" alt="Development Head" width="240" height="240" decoding="async" loading="lazy"></div>
+                            <div class="fit-img"><img src="assets/images/artwork/badge-technical.svg" alt="Technical Head" width="240" height="240" decoding="async" loading="lazy"></div>
+                            <div class="fit-img"><a href="#leadership" aria-label="See all five founding leads"> +2 </a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="layout-block team-intro-column layout-full layout-flex layout-container layout-loaded">
+                      <!-- EDIT: heading. -->
+                      <div class="layout-block team-title widget">
+                        <div class="widget-content">
+                          <h2 class="mil-title h2-lg"><span> <span class="opacity-7 d-inline">Meet</span> our founders. </span></h2>
+                        </div>
+                      </div>
+                      <!-- EDIT: team introduction. -->
+                      <div class="layout-block team-description widget">
+                        <div class="widget-content">
+                          <div class="mil-text">
+                            <div><p>ByteX is led by five AIU students. Each founding lead looks after one part of the initiative, from coordination and development to marketing and public relations.</p></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="layout-block team-content-row layout-full layout-flex layout-container layout-loaded">
+                  <!-- Mission box (left). EDIT: small label and statement. -->
+                  <div class="layout-block team-people-column layout-full layout-flex layout-container layout-loaded">
+                    <div class="layout-block team-people-row layout-full data-ui-animate sub-bg layout-flex layout-container layout-loaded">
+                      <div class="layout-block team-avatars ui-view-default widget" aria-hidden="true">
+                        <div class="ui-icon-wrapper">
+                          <!-- Decorative sparkle icon; leave unchanged. -->
+                          <div class="widget-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="#fff"><path fill="#fff" d="M78.4,38.4c0,0-11.8,0-15.8,0c-1.6,0-4.8-0.2-7.1-0.8c-2.3-0.6-4.3-0.8-6.3-2.4c-2-1.2-3.5-3.2-4.7-4.8       c-1.2-1.6-1.6-3.6-2-5.5c-0.3-1.5-0.7-4.3-0.8-5.9c-0.2-4.3,0-17.4,0-17.4C41.8,0.8,41,0,40.2,0s-1.6,0.8-1.6,1.6c0,0,0,13.1,0,17.4       c0,1.6-0.6,4.3-0.8,5.9c-0.3,2-0.8,4-2,5.5c-1.2,2-2.8,3.6-4.7,4.8s-4,1.8-6.3,2.4c-1.9,0.5-4.7,0.6-6.7,0.8c-3.9,0.4-16.6,0-16.6,0       C0.8,38.4,0,39.2,0,40c0,0.8,0.8,1.6,1.6,1.6c0,0,12.2,0,16.6,0c1.6,0,4.8,0.3,6.7,0.8c2.3,0.6,4.3,0.8,6.3,2.4       c1.6,1.2,3.2,2.8,4.3,4.4c1.2,2,2.1,3.9,2.4,6.3c0.2,1.7,0.7,4.7,0.8,6.7c0.2,4,0,16.2,0,16.2c0,0.8,0.8,1.6,1.6,1.6       s1.6-0.8,1.6-1.6c0,0,0-12.3,0-16.2c0-1.6,0.5-5.1,0.8-6.7c0.5-2.3,0.8-4.4,2.4-6.3c1.2-1.6,2.8-3.2,4.3-4.4c2-1.2,3.9-2,6.3-2.4       c1.8-0.3,5.1-0.7,7.1-0.8c3.5-0.2,15.8,0,15.8,0c0.8,0,1.6-0.8,1.6-1.6C80,39.2,79.2,38.4,78.4,38.4C78.4,38.4,78.4,38.4,78.4,38.4z       "></path></svg></div>
+                        </div>
+                      </div>
+                      <div class="layout-block team-recognition-column layout-container e-div-block-base e-47df2e1-083f6bb layout-loaded">
+                        <div class="layout-block team-recognition-title opacity-7 widget">
+                          <div class="widget-content">
+                            <div class="mil-title"><span> Our Mission </span></div>
+                          </div>
+                        </div>
+                        <div class="layout-block team-recognition-description widget">
+                          <div class="widget-content">
+                            <div class="mil-title"><span> Affordable, accessible digital solutions and real-world learning for students. </span></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Image panel (right). The image itself is set in assets/css/bytex.css (section 7).
+                       EDIT: the button label and href. -->
+                  <div class="layout-block team-button-column layout-full layout-flex layout-container layout-loaded">
+                    <div class="layout-block team-button-wrap layout-full data-ui-animate layout-flex layout-container layout-loaded">
+                      <div class="layout-block team-button widget">
+                        <div class="widget-content">
+                          <div>
+                            <a href="#leadership" class="text-uppercase fs-14 fw-500 butn-arrow butn-rounded">
+                              <span>Founding team</span>
+                              <span class="arrow-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"></path></svg>
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"></path></svg>
+                              </span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Three numbers. These are typed by hand (not calculated) and come from the ByteX brief.
+                     EDIT: the small label and the big number in each block. -->
+                <div class="layout-block team-statistics-column layout-full layout-flex layout-container layout-loaded">
+                  <div class="layout-block statistic-reviews-column layout-full layout-flex layout-container layout-loaded">
+                    <div class="layout-block statistic-reviews widget">
+                      <div class="widget-content">
+                        <div class="numbers" data-ui-animate="" data-delay="0.2">
+                          <div class="item">
+                            <div class="mil-label text-uppercase mb-50px"><span> founding leads </span></div>
+                            <div class="h2"><span> 05 </span></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="layout-block statistic-launches-column layout-full layout-flex layout-container layout-loaded">
+                    <div class="layout-block statistic-launches widget">
+                      <div class="widget-content">
+                        <div class="numbers" data-ui-animate="" data-delay="0.3">
+                          <div class="item">
+                            <div class="mil-label text-uppercase mb-50px"><span> initial service areas </span></div>
+                            <div class="h2"><span> 02 </span></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="layout-block statistic-teammates-column layout-full layout-flex layout-container layout-loaded">
+                    <div class="layout-block statistic-teammates widget">
+                      <div class="widget-content">
+                        <div class="numbers" data-ui-animate="" data-delay="0.4">
+                          <div class="item">
+                            <div class="mil-label text-uppercase mb-50px"><span> short-term priorities </span></div>
+                            <div class="h2"><span> 06 </span></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- END: Team -->
+
+
+            <!-- ===============================================================
+                 START: Approach (#approach) — five staggered cards
+                 The big "Approach" title stays pinned while cards scroll (desktop).
+                 KEEP: classes "features" and "stack-title" (used by main.js).
+                 =============================================================== -->
+            <div class="layout-block approach-section layout-flex layout-boxed layout-container layout-parent layout-loaded" id="approach">
+              <div class="layout-inner">
+                <div class="layout-block approach-column layout-full layout-flex layout-container layout-loaded">
+                  <div class="layout-block approach-cards widget">
+                    <div class="widget-content">
+                      <div class="features">
+                        <!-- EDIT: the big background title. -->
+                        <div class="sec-head text-align-center stack-title text-uppercase"><h2 class="mil-title"><span> Approach </span></h2></div>
+                        <div class="row">
+
+                          <!-- APPROACH CARD 1. EDIT: icon src, the two title lines (split by <br>) and the paragraph.
+                               KEEP: the column classes (offset-lg-...) — they create the staggered layout. -->
+                          <div class="col-lg-3 col-md-6" data-ui-animate="" data-delay="0" data-direction="up">
+                            <div class="item mt-60px mb-60px">
+                              <div class="w-60px mb-30px"><img src="assets/images/decor/serv-icon-1.svg" alt="" decoding="async" loading="lazy"></div>
+                              <div class="h6 mb-80px"><span> Identify <br> real problems </span></div>
+                              <div class="mil-text">
+                                <div><p>We listen to AIU departments, units and student communities first. For example, we have noticed confusion about office operating hours.</p></div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- APPROACH CARD 2. EDIT: icon src, the two title lines (split by <br>) and the paragraph.
+                               KEEP: the column classes (offset-lg-...) — they create the staggered layout. -->
+                          <div class="col-lg-3 col-md-6 offset-lg-6" data-ui-animate="" data-delay="0" data-direction="up">
+                            <div class="item mt-60px mb-60px bg-light">
+                              <div class="w-60px mb-30px"><img src="assets/images/decor/serv-icon-2.svg" alt="" decoding="async" loading="lazy"></div>
+                              <div class="h6 mb-80px"><span> Affordable <br> solutions </span></div>
+                              <div class="mil-text">
+                                <div><p>We build simple, practical tools that people without a technical background can actually use.</p></div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- APPROACH CARD 3. EDIT: icon src, the two title lines (split by <br>) and the paragraph.
+                               KEEP: the column classes (offset-lg-...) — they create the staggered layout. -->
+                          <div class="col-lg-3 col-md-6 offset-lg-5" data-ui-animate="" data-delay="0" data-direction="up">
+                            <div class="item mt-60px mb-60px">
+                              <div class="w-60px mb-30px"><img src="assets/images/decor/serv-icon-7.svg" alt="" decoding="async" loading="lazy"></div>
+                              <div class="h6 mb-80px"><span> Real student <br> experience </span></div>
+                              <div class="mil-text">
+                                <div><p>Students apply their knowledge to real projects and build professional experience along the way.</p></div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- APPROACH CARD 4. EDIT: icon src, the two title lines (split by <br>) and the paragraph.
+                               KEEP: the column classes (offset-lg-...) — they create the staggered layout. -->
+                          <div class="col-lg-3 col-md-6 offset-lg-2" data-ui-animate="" data-delay="0" data-direction="up">
+                            <div class="item mt-60px mb-60px bg-light main-colorbg">
+                              <div class="w-60px mb-30px"><img src="assets/images/decor/serv-icon-6.svg" alt="" decoding="async" loading="lazy"></div>
+                              <div class="h6 mb-80px"><span> Sustainable <br> revenue </span></div>
+                              <div class="mil-text">
+                                <div><p>An affordable service model is how ByteX aims to keep running and growing over the long term.</p></div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- APPROACH CARD 5. EDIT: icon src, the two title lines (split by <br>) and the paragraph.
+                               KEEP: the column classes (offset-lg-...) — they create the staggered layout. -->
+                          <div class="col-lg-3 col-md-6 offset-lg-3" data-ui-animate="" data-delay="0" data-direction="up">
+                            <div class="item mt-60px mb-60px">
+                              <div class="w-60px mb-30px"><img src="assets/images/decor/serv-icon-5.svg" alt="" decoding="async" loading="lazy"></div>
+                              <div class="h6 mb-80px"><span> Reinvest <br> the impact </span></div>
+                              <div class="mil-text">
+                                <div><p>Revenue can support further development, student opportunities, training, infrastructure and future social-impact projects.</p></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- END: Approach -->
+
+
+            <!-- ===============================================================
+                 START: Vision & purpose (#vision)
+                 Two linked sliders: the large statement (left) and a small
+                 preview (right). Both MUST have the same number of slides in
+                 the same order. The arrows move both.
+                 =============================================================== -->
+            <div class="layout-block testimonials-section layout-full layout-flex layout-container layout-parent layout-loaded" id="vision">
+              <div class="layout-block testimonials-widget widget">
+                <div class="widget-content">
+                  <div class="testim-style1 sub-bg pb-80px">
+                    <div class="container">
+                      <div class="sec-head bord mb-60px">
+                        <div class="h6 text-uppercase"><span> Vision &amp; Purpose </span></div>
+                      </div>
+                      <div class="testim-sliders" data-ui-animate="" data-delay="0.2">
+                        <div class="row align-items-end">
+                          <div class="col-lg-9">
+                            <!-- KEEP: class "main-slider" (large statements). -->
+                            <div class="main-slider">
+                              <div class="swiper-wrapper">
+
+                                <!-- STATEMENT 1. EDIT: image, statement text, title and subtitle.
+                                     Keep the matching image in the small preview slider below in the SAME position. -->
+                                <div class="swiper-slide">
+                                  <div class="row align-items-center md-marg">
+                                    <div class="col-md-5 col-lg-5">
+                                      <div class="img fit-img h-400px border-radius-30px o-hidden md-mb30">
+                                        <img src="assets/images/artwork/purpose-vision.svg" alt="" width="960" height="1200" decoding="async" loading="lazy">
+                                      </div>
+                                    </div>
+                                    <div class="col-md-7 col-lg-7">
+                                      <!-- Decorative quotation-mark icon; leave unchanged. -->
+                                      <svg class="w-90px mb-30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800"> <path fill="#fff" class="cls-1" d="M225.87,344.5a233.54,233.54,0,0,1,66.2-60.93l7.93-4.9v-64.1l-19.77,3.76C77,256.67,66.67,421.53,66.67,454.17,66.67,524.4,108.37,600,199.9,600A128.53,128.53,0,0,0,333.24,476.46q.12-2.88.09-5.76A130.2,130.2,0,0,0,225.87,344.5Zm-26,222.17c-73.73,0-99.9-60.6-99.9-112.5,0-37.84,12.4-160.24,166.67-198.77v4.87a266.2,266.2,0,0,0-84,89.83L171.37,375H200a98,98,0,0,1,100,95.7,95.94,95.94,0,0,1-95.81,96.06Q202,566.76,199.9,566.67Zm426-222.17a233.71,233.71,0,0,1,66.17-60.93l7.93-4.9v-64.1l-19.77,3.76C477,256.67,466.67,421.53,466.67,454.17,466.67,524.4,508.37,600,599.9,600A128.53,128.53,0,0,0,733.24,476.46q.12-2.88.09-5.76A130.2,130.2,0,0,0,625.87,344.5Zm-26,222.17c-73.7,0-99.87-60.6-99.87-112.5,0-37.84,12.4-160.24,166.67-198.77v4.87a266.2,266.2,0,0,0-84,89.83L571.37,375H600a98,98,0,0,1,100,95.7,95.94,95.94,0,0,1-95.81,96.06q-2.15,0-4.29-.09Z"></path> <path fill="none" d="M0,0H800V800H0Z"></path> </svg>
+                                      <div class="mil-text mil-text-description">
+                                        <div><p>To build a sustainable technology initiative that solves real problems, creates opportunities, and makes digital solutions accessible to more people.</p></div>
+                                      </div>
+                                      <div class="info-text d-flex mt-30px">
+                                        <div class="h6 fs-18 mr-15px"><span> Our vision </span></div>
+                                        <div class="mil-text">
+                                          <div> ByteX</div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- STATEMENT 2. EDIT: image, statement text, title and subtitle.
+                                     Keep the matching image in the small preview slider below in the SAME position. -->
+                                <div class="swiper-slide">
+                                  <div class="row align-items-center md-marg">
+                                    <div class="col-md-5 col-lg-5">
+                                      <div class="img fit-img h-400px border-radius-30px o-hidden md-mb30">
+                                        <img src="assets/images/artwork/purpose-bridge-the-gap.svg" alt="" width="960" height="1200" decoding="async" loading="lazy">
+                                      </div>
+                                    </div>
+                                    <div class="col-md-7 col-lg-7">
+                                      <!-- Decorative quotation-mark icon; leave unchanged. -->
+                                      <svg class="w-90px mb-30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800"> <path fill="#fff" class="cls-1" d="M225.87,344.5a233.54,233.54,0,0,1,66.2-60.93l7.93-4.9v-64.1l-19.77,3.76C77,256.67,66.67,421.53,66.67,454.17,66.67,524.4,108.37,600,199.9,600A128.53,128.53,0,0,0,333.24,476.46q.12-2.88.09-5.76A130.2,130.2,0,0,0,225.87,344.5Zm-26,222.17c-73.73,0-99.9-60.6-99.9-112.5,0-37.84,12.4-160.24,166.67-198.77v4.87a266.2,266.2,0,0,0-84,89.83L171.37,375H200a98,98,0,0,1,100,95.7,95.94,95.94,0,0,1-95.81,96.06Q202,566.76,199.9,566.67Zm426-222.17a233.71,233.71,0,0,1,66.17-60.93l7.93-4.9v-64.1l-19.77,3.76C477,256.67,466.67,421.53,466.67,454.17,466.67,524.4,508.37,600,599.9,600A128.53,128.53,0,0,0,733.24,476.46q.12-2.88.09-5.76A130.2,130.2,0,0,0,625.87,344.5Zm-26,222.17c-73.7,0-99.87-60.6-99.87-112.5,0-37.84,12.4-160.24,166.67-198.77v4.87a266.2,266.2,0,0,0-84,89.83L571.37,375H600a98,98,0,0,1,100,95.7,95.94,95.94,0,0,1-95.81,96.06q-2.15,0-4.29-.09Z"></path> <path fill="none" d="M0,0H800V800H0Z"></path> </svg>
+                                      <div class="mil-text mil-text-description">
+                                        <div><p>Many people, students and small organisations need digital solutions but lack the technical knowledge or resources to build them. ByteX aims to bridge that gap.</p></div>
+                                      </div>
+                                      <div class="info-text d-flex mt-30px">
+                                        <div class="h6 fs-18 mr-15px"><span> Why ByteX </span></div>
+                                        <div class="mil-text">
+                                          <div> The gap we want to close</div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- STATEMENT 3. EDIT: image, statement text, title and subtitle.
+                                     Keep the matching image in the small preview slider below in the SAME position. -->
+                                <div class="swiper-slide">
+                                  <div class="row align-items-center md-marg">
+                                    <div class="col-md-5 col-lg-5">
+                                      <div class="img fit-img h-400px border-radius-30px o-hidden md-mb30">
+                                        <img src="assets/images/artwork/purpose-zero-unemployment.svg" alt="" width="960" height="1200" decoding="async" loading="lazy">
+                                      </div>
+                                    </div>
+                                    <div class="col-md-7 col-lg-7">
+                                      <!-- Decorative quotation-mark icon; leave unchanged. -->
+                                      <svg class="w-90px mb-30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800"> <path fill="#fff" class="cls-1" d="M225.87,344.5a233.54,233.54,0,0,1,66.2-60.93l7.93-4.9v-64.1l-19.77,3.76C77,256.67,66.67,421.53,66.67,454.17,66.67,524.4,108.37,600,199.9,600A128.53,128.53,0,0,0,333.24,476.46q.12-2.88.09-5.76A130.2,130.2,0,0,0,225.87,344.5Zm-26,222.17c-73.73,0-99.9-60.6-99.9-112.5,0-37.84,12.4-160.24,166.67-198.77v4.87a266.2,266.2,0,0,0-84,89.83L171.37,375H200a98,98,0,0,1,100,95.7,95.94,95.94,0,0,1-95.81,96.06Q202,566.76,199.9,566.67Zm426-222.17a233.71,233.71,0,0,1,66.17-60.93l7.93-4.9v-64.1l-19.77,3.76C477,256.67,466.67,421.53,466.67,454.17,466.67,524.4,508.37,600,599.9,600A128.53,128.53,0,0,0,733.24,476.46q.12-2.88.09-5.76A130.2,130.2,0,0,0,625.87,344.5Zm-26,222.17c-73.7,0-99.87-60.6-99.87-112.5,0-37.84,12.4-160.24,166.67-198.77v4.87a266.2,266.2,0,0,0-84,89.83L571.37,375H600a98,98,0,0,1,100,95.7,95.94,95.94,0,0,1-95.81,96.06q-2.15,0-4.29-.09Z"></path> <path fill="none" d="M0,0H800V800H0Z"></path> </svg>
+                                      <div class="mil-text mil-text-description">
+                                        <div><p>Skills → Experience → Opportunities → Income. Technology can help students turn what they know into experience, opportunities and, eventually, income.</p></div>
+                                      </div>
+                                      <div class="info-text d-flex mt-30px">
+                                        <div class="h6 fs-18 mr-15px"><span> 3Zero alignment </span></div>
+                                        <div class="mil-text">
+                                          <div> Zero Unemployment</div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- Shows "1 / 3"; filled in by main.js. -->
+                              <div class="swiper-pagination md-hide"></div>
+                            </div>
+                          </div>
+                          <div class="col-lg-2 offset-lg-1">
+                            <div class="thumb-side">
+                              <!-- KEEP: these arrow classes; main.js connects them to both sliders. -->
+                              <div class="swiper-controls mb-30px md-mb-0">
+                                <div class="swiper-button-prev" role="button" tabindex="0" aria-label="Previous statement"></div>
+                                <div class="swiper-button-next" role="button" tabindex="0" aria-label="Next statement"></div>
+                              </div>
+                              <!-- Small preview images: SAME images, SAME order as the statements above. -->
+                              <div class="thumb-slider md-hide" aria-hidden="true">
+                                <div class="swiper-wrapper">
+                                  <div class="swiper-slide">
+                                    <div class="img fit-img h-250px border-radius-30px o-hidden">
+                                      <img src="assets/images/artwork/purpose-vision.svg" alt="" width="960" height="1200" decoding="async" loading="lazy">
+                                    </div>
+                                  </div>
+                                  <div class="swiper-slide">
+                                    <div class="img fit-img h-250px border-radius-30px o-hidden">
+                                      <img src="assets/images/artwork/purpose-bridge-the-gap.svg" alt="" width="960" height="1200" decoding="async" loading="lazy">
+                                    </div>
+                                  </div>
+                                  <div class="swiper-slide">
+                                    <div class="img fit-img h-250px border-radius-30px o-hidden">
+                                      <img src="assets/images/artwork/purpose-zero-unemployment.svg" alt="" width="960" height="1200" decoding="async" loading="lazy">
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Value words row (replaces the template's client logos).
+                         EDIT: the four words and the middle line. These come from the ByteX mission. -->
+                    <div class="brand-style1 mt-75px mb-45px position-relative z-index-9">
+                      <div class="container">
+                        <div class="row align-items-center">
+                          <div class="col-lg-2 col-md-4 col-6">
+                            <div class="item text-align-center"><span class="value-word">Affordable</span></div>
+                          </div>
+                          <div class="col-lg-2 col-md-4 col-6">
+                            <div class="item text-align-center"><span class="value-word">Accessible</span></div>
+                          </div>
+                          <div class="col-lg-2 col-md-4 col-6">
+                            <div class="item text-align-center"><span class="value-word">Practical</span></div>
+                          </div>
+                          <div class="col-lg-3 col-md-4 col-12 d-flex justify-content-center md-order-2">
+                            <div class="d-flex align-items-center">
+                              <span class="pr-10 mr-20px line-right border-color-transparent-white-light"><img src="assets/images/decor/global.svg" alt="" class="invert-icon w-20px" decoding="async" loading="lazy"></span>
+                              <span>Starting at AIU, Malaysia</span>
+                            </div>
+                          </div>
+                          <div class="col-lg-3 col-md-8 col-6 md-order-1">
+                            <div class="item text-align-center"><span class="value-word">Sustainable</span></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- END: Vision & purpose -->
+
+
+            <!-- ===============================================================
+                 START: Moving words above the leadership list
+                 =============================================================== -->
+            <div class="layout-block awards-marquee-section layout-full layout-flex layout-container layout-parent layout-loaded">
+              <div class="layout-block awards-marquee widget">
+                <div class="widget-content">
+                  <div class="main-marq xlrg with-shad" aria-hidden="true">
+                    <div class="slide-har st1 opacity-5">
+                      <!-- Track 1 -->
+                      <div class="box d-flex align-items-center">
+                        <div class="item">
+                          <div class="h4"><a><span> Founding Team </span></a></div>
+                        </div>
+                        <div class="item">
+                          <div class="w-70px"><img src="assets/images/decor/star.svg" alt="" decoding="async" loading="lazy"></div>
+                        </div>
+                        <div class="item">
+                          <div class="h4"><a><span> Leadership </span></a></div>
+                        </div>
+                        <div class="item">
+                          <div class="w-70px"><img src="assets/images/decor/star.svg" alt="" decoding="async" loading="lazy"></div>
+                        </div>
+                        <div class="item">
+                          <div class="h4"><a><span> Founding Team </span></a></div>
+                        </div>
+                        <div class="item">
+                          <div class="w-70px"><img src="assets/images/decor/star.svg" alt="" decoding="async" loading="lazy"></div>
+                        </div>
+                        <div class="item">
+                          <div class="h4"><a><span> Leadership </span></a></div>
+                        </div>
+                        <div class="item">
+                          <div class="w-70px"><img src="assets/images/decor/star.svg" alt="" decoding="async" loading="lazy"></div>
+                        </div>
+                        <div class="item">
+                          <div class="h4"><a><span> Founding Team </span></a></div>
+                        </div>
+                        <div class="item">
+                          <div class="w-70px"><img src="assets/images/decor/star.svg" alt="" decoding="async" loading="lazy"></div>
+                        </div>
+                        <div class="item">
+                          <div class="h4"><a><span> Leadership </span></a></div>
+                        </div>
+                        <div class="item">
+                          <div class="w-70px"><img src="assets/images/decor/star.svg" alt="" decoding="async" loading="lazy"></div>
+                        </div>
+                      </div>
+                      <!-- Track 2: an exact copy of track 1 (needed for the seamless loop). -->
+                      <div class="box d-flex align-items-center">
+                        <div class="item">
+                          <div class="h4"><a><span> Founding Team </span></a></div>
+                        </div>
+                        <div class="item">
+                          <div class="w-70px"><img src="assets/images/decor/star.svg" alt="" decoding="async" loading="lazy"></div>
+                        </div>
+                        <div class="item">
+                          <div class="h4"><a><span> Leadership </span></a></div>
+                        </div>
+                        <div class="item">
+                          <div class="w-70px"><img src="assets/images/decor/star.svg" alt="" decoding="async" loading="lazy"></div>
+                        </div>
+                        <div class="item">
+                          <div class="h4"><a><span> Founding Team </span></a></div>
+                        </div>
+                        <div class="item">
+                          <div class="w-70px"><img src="assets/images/decor/star.svg" alt="" decoding="async" loading="lazy"></div>
+                        </div>
+                        <div class="item">
+                          <div class="h4"><a><span> Leadership </span></a></div>
+                        </div>
+                        <div class="item">
+                          <div class="w-70px"><img src="assets/images/decor/star.svg" alt="" decoding="async" loading="lazy"></div>
+                        </div>
+                        <div class="item">
+                          <div class="h4"><a><span> Founding Team </span></a></div>
+                        </div>
+                        <div class="item">
+                          <div class="w-70px"><img src="assets/images/decor/star.svg" alt="" decoding="async" loading="lazy"></div>
+                        </div>
+                        <div class="item">
+                          <div class="h4"><a><span> Leadership </span></a></div>
+                        </div>
+                        <div class="item">
+                          <div class="w-70px"><img src="assets/images/decor/star.svg" alt="" decoding="async" loading="lazy"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- END: Moving words -->
+
+
+            <!-- ===============================================================
+                 START: Founding leadership (#leadership)
+                 One row per person: number, name, role. On desktop, hovering a
+                 row shows its image next to the mouse.
+                 Student ID numbers are intentionally NOT shown.
+                 =============================================================== -->
+            <div class="layout-block awards-section layout-flex layout-boxed layout-container layout-parent layout-loaded" id="leadership">
+              <div class="layout-inner">
+                <div class="layout-block awards-background widget" aria-hidden="true">
+                  <div class="widget-content">
+                    <div class="position-relative">
+                      <div class="w-300px opacity-1 shape-top-left"><img src="assets/images/decor/mshap2.webp" alt="" data-speed="0.9" data-lag="0" width="1000" height="870" decoding="async" loading="lazy"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="layout-block awards-column layout-full layout-flex layout-container layout-loaded">
+                  <div class="layout-block awards-list widget">
+                    <div class="widget-content">
+                      <!-- KEEP: class "awards-reval" (main.js uses it for the hover fade). -->
+                      <div class="awards-reval position-relative" data-ui-animate="" data-delay="0.2">
+                        <div class="row justify-content-center">
+                          <div class="col-lg-11">
+
+                            <!-- LEADER 01. EDIT: number, name, role, and the preview image in background-image.
+                                 To use a photo later, put it in assets/images/team/ and change the url(...) path. -->
+                            <div class="item-row hover-reveal-item">
+                              <div class="row">
+                                <div class="col-lg-8">
+                                  <div>
+                                    <span class="award-year">01</span>
+                                    <span class="award-text">Sifat Ullah</span>
+                                  </div>
+                                </div>
+                                <div class="col-lg-4">
+                                  <div class="d-flex justify-content-between align-items-center">
+                                    <span class="award-position">Lead Coordinator</span>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- KEEP: class "award-reveal-img" (hover preview). Only the image path should change. -->
+                              <div class="award-reveal-img bg-img" style="background-image: url('assets/images/artwork/role-coordinator.svg');"></div>
+                            </div>
+                            <!-- LEADER 02. EDIT: number, name, role, and the preview image in background-image.
+                                 To use a photo later, put it in assets/images/team/ and change the url(...) path. -->
+                            <div class="item-row hover-reveal-item">
+                              <div class="row">
+                                <div class="col-lg-8">
+                                  <div>
+                                    <span class="award-year">02</span>
+                                    <span class="award-text">Md Ismayel Shekh</span>
+                                  </div>
+                                </div>
+                                <div class="col-lg-4">
+                                  <div class="d-flex justify-content-between align-items-center">
+                                    <span class="award-position">Development Head</span>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- KEEP: class "award-reveal-img" (hover preview). Only the image path should change. -->
+                              <div class="award-reveal-img bg-img" style="background-image: url('assets/images/artwork/role-development.svg');"></div>
+                            </div>
+                            <!-- LEADER 03. EDIT: number, name, role, and the preview image in background-image.
+                                 To use a photo later, put it in assets/images/team/ and change the url(...) path. -->
+                            <div class="item-row hover-reveal-item">
+                              <div class="row">
+                                <div class="col-lg-8">
+                                  <div>
+                                    <span class="award-year">03</span>
+                                    <span class="award-text">Ismail Hosen</span>
+                                  </div>
+                                </div>
+                                <div class="col-lg-4">
+                                  <div class="d-flex justify-content-between align-items-center">
+                                    <span class="award-position">Technical Head</span>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- KEEP: class "award-reveal-img" (hover preview). Only the image path should change. -->
+                              <div class="award-reveal-img bg-img" style="background-image: url('assets/images/artwork/role-technical.svg');"></div>
+                            </div>
+                            <!-- LEADER 04. EDIT: number, name, role, and the preview image in background-image.
+                                 To use a photo later, put it in assets/images/team/ and change the url(...) path. -->
+                            <div class="item-row hover-reveal-item">
+                              <div class="row">
+                                <div class="col-lg-8">
+                                  <div>
+                                    <span class="award-year">04</span>
+                                    <span class="award-text">Mahmudul Hasan Sowrov</span>
+                                  </div>
+                                </div>
+                                <div class="col-lg-4">
+                                  <div class="d-flex justify-content-between align-items-center">
+                                    <span class="award-position">Marketing Head</span>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- KEEP: class "award-reveal-img" (hover preview). Only the image path should change. -->
+                              <div class="award-reveal-img bg-img" style="background-image: url('assets/images/artwork/role-marketing.svg');"></div>
+                            </div>
+                            <!-- LEADER 05. EDIT: number, name, role, and the preview image in background-image.
+                                 To use a photo later, put it in assets/images/team/ and change the url(...) path. -->
+                            <div class="item-row hover-reveal-item">
+                              <div class="row">
+                                <div class="col-lg-8">
+                                  <div>
+                                    <span class="award-year">05</span>
+                                    <span class="award-text">Nasif Mahmud Nafi</span>
+                                  </div>
+                                </div>
+                                <div class="col-lg-4">
+                                  <div class="d-flex justify-content-between align-items-center">
+                                    <span class="award-position">Public Relations Head</span>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- KEEP: class "award-reveal-img" (hover preview). Only the image path should change. -->
+                              <div class="award-reveal-img bg-img" style="background-image: url('assets/images/artwork/role-public-relations.svg');"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- END: Founding leadership -->
+
+
+            <!-- ===============================================================
+                 START: Roadmap (#roadmap) — slider of the six short-term priorities
+                 =============================================================== -->
+            <div class="layout-block blog-section layout-flex layout-boxed layout-container layout-parent layout-loaded" id="roadmap">
+              <div class="layout-inner">
+                <div class="layout-block blog-heading-row layout-full layout-flex layout-container layout-loaded">
+                  <div class="layout-block blog-label widget">
+                    <div class="widget-content">
+                      <div class="sec-head">
+                        <div class="h6 text-uppercase"><span> Roadmap </span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- EDIT: heading (<br> creates the line break). -->
+                  <div class="layout-block blog-title widget">
+                    <div class="widget-content">
+                      <h2 class="mil-title"><span> Our short-term <br>priorities. </span></h2>
+                    </div>
+                  </div>
+                </div>
+                <div class="layout-block blog-cards-row layout-full layout-flex layout-container layout-loaded">
+                  <div class="layout-block blog-cards widget">
+                    <div class="widget-content">
+                      <!-- KEEP: class "blog-style2" and "swiper-container" (used by main.js). -->
+                      <div class="blog-style2 attr-text-false" data-ui-animate="" data-delay="0.2">
+                        <div class="swiper-container">
+                          <div class="swiper-wrapper">
+
+                            <!-- PRIORITY 01. EDIT: image, the number in the small label line, the title and BOTH href values.
+                                 Each complete swiper-slide is one card; copy one to add another. -->
+                            <div class="swiper-slide">
+                              <div class="item">
+                                <div class="fit-img h-350px border-radius-30px o-hidden">
+                                  <a href="#about">
+                                    <img src="assets/images/artwork/roadmap-establish.svg" alt="Establish ByteX: website, identity and structure" width="1200" height="760" decoding="async" loading="lazy">
+                                  </a>
+                                </div>
+                                <div class="text mt-30px">
+                                  <div class="fs-14 mb-20px d-flex align-items-center">
+                                    <span class="opacity-7">Priority</span>
+                                    <span class="mr-15px ml-15px opacity-7">|</span>
+                                    <span class="opacity-7">01</span>
+                                  </div>
+                                  <div class="h5"><a href="#about">Establish ByteX: website, identity and structure</a></div>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- PRIORITY 02. EDIT: image, the number in the small label line, the title and BOTH href values.
+                                 Each complete swiper-slide is one card; copy one to add another. -->
+                            <div class="swiper-slide">
+                              <div class="item">
+                                <div class="fit-img h-350px border-radius-30px o-hidden">
+                                  <a href="#services">
+                                    <img src="assets/images/artwork/roadmap-launch.svg" alt="Launch our initial web, hosting and automation services" width="1200" height="760" decoding="async" loading="lazy">
+                                  </a>
+                                </div>
+                                <div class="text mt-30px">
+                                  <div class="fs-14 mb-20px d-flex align-items-center">
+                                    <span class="opacity-7">Priority</span>
+                                    <span class="mr-15px ml-15px opacity-7">|</span>
+                                    <span class="opacity-7">02</span>
+                                  </div>
+                                  <div class="h5"><a href="#services">Launch our initial web, hosting and automation services</a></div>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- PRIORITY 03. EDIT: image, the number in the small label line, the title and BOTH href values.
+                                 Each complete swiper-slide is one card; copy one to add another. -->
+                            <div class="swiper-slide">
+                              <div class="item">
+                                <div class="fit-img h-350px border-radius-30px o-hidden">
+                                  <a href="#approach">
+                                    <img src="assets/images/artwork/roadmap-identify.svg" alt="Identify real problems with AIU departments and communities" width="1200" height="760" decoding="async" loading="lazy">
+                                  </a>
+                                </div>
+                                <div class="text mt-30px">
+                                  <div class="fs-14 mb-20px d-flex align-items-center">
+                                    <span class="opacity-7">Priority</span>
+                                    <span class="mr-15px ml-15px opacity-7">|</span>
+                                    <span class="opacity-7">03</span>
+                                  </div>
+                                  <div class="h5"><a href="#approach">Identify real problems with AIU departments and communities</a></div>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- PRIORITY 04. EDIT: image, the number in the small label line, the title and BOTH href values.
+                                 Each complete swiper-slide is one card; copy one to add another. -->
+                            <div class="swiper-slide">
+                              <div class="item">
+                                <div class="fit-img h-350px border-radius-30px o-hidden">
+                                  <a href="#solutions">
+                                    <img src="assets/images/artwork/roadmap-build.svg" alt="Build practical solutions based on real needs" width="1200" height="760" decoding="async" loading="lazy">
+                                  </a>
+                                </div>
+                                <div class="text mt-30px">
+                                  <div class="fs-14 mb-20px d-flex align-items-center">
+                                    <span class="opacity-7">Priority</span>
+                                    <span class="mr-15px ml-15px opacity-7">|</span>
+                                    <span class="opacity-7">04</span>
+                                  </div>
+                                  <div class="h5"><a href="#solutions">Build practical solutions based on real needs</a></div>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- PRIORITY 05. EDIT: image, the number in the small label line, the title and BOTH href values.
+                                 Each complete swiper-slide is one card; copy one to add another. -->
+                            <div class="swiper-slide">
+                              <div class="item">
+                                <div class="fit-img h-350px border-radius-30px o-hidden">
+                                  <a href="#team">
+                                    <img src="assets/images/artwork/roadmap-opportunities.svg" alt="Create student opportunities through real projects" width="1200" height="760" decoding="async" loading="lazy">
+                                  </a>
+                                </div>
+                                <div class="text mt-30px">
+                                  <div class="fs-14 mb-20px d-flex align-items-center">
+                                    <span class="opacity-7">Priority</span>
+                                    <span class="mr-15px ml-15px opacity-7">|</span>
+                                    <span class="opacity-7">05</span>
+                                  </div>
+                                  <div class="h5"><a href="#team">Create student opportunities through real projects</a></div>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- PRIORITY 06. EDIT: image, the number in the small label line, the title and BOTH href values.
+                                 Each complete swiper-slide is one card; copy one to add another. -->
+                            <div class="swiper-slide">
+                              <div class="item">
+                                <div class="fit-img h-350px border-radius-30px o-hidden">
+                                  <a href="#vision">
+                                    <img src="assets/images/artwork/roadmap-sustainability.svg" alt="Build an affordable, sustainable service model" width="1200" height="760" decoding="async" loading="lazy">
+                                  </a>
+                                </div>
+                                <div class="text mt-30px">
+                                  <div class="fs-14 mb-20px d-flex align-items-center">
+                                    <span class="opacity-7">Priority</span>
+                                    <span class="mr-15px ml-15px opacity-7">|</span>
+                                    <span class="opacity-7">06</span>
+                                  </div>
+                                  <div class="h5"><a href="#vision">Build an affordable, sustainable service model</a></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-controls mt-30px">
+                          <div class="swiper-button-prev" role="button" tabindex="0" aria-label="Previous priority"></div>
+                          <div class="swiper-button-next" role="button" tabindex="0" aria-label="Next priority"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- END: Roadmap -->
+
+          </div>
+        </main>
+
+
+        <!-- ===================================================================
+             START: Footer / Contact (#contact)
+             =================================================================== -->
+        <footer id="contact">
+          <div class="page-layout footer-layout">
+
+            <!-- Small moving line at the top of the footer. EDIT: keep BOTH copies identical. -->
+            <div class="layout-block footer-marquee-section layout-flex layout-boxed layout-container layout-parent layout-loaded" aria-hidden="true">
+              <div class="layout-inner">
+                <div class="layout-block footer-marquee-row layout-full layout-flex layout-container layout-loaded">
+                  <div class="layout-block footer-marquee-column layout-full line-bottom border-color-transparent-white-light layout-flex layout-container layout-loaded">
+                    <div class="layout-block footer-marquee-copy-column layout-full layout-flex layout-container layout-loaded">
+                      <div class="layout-block footer-marquee-copy widget heading-widget"><p class="heading-title">. Technology • Innovation • Solutions</p></div>
+                    </div>
+                    <div class="layout-block footer-marquee-repeat-column layout-full layout-flex layout-container layout-loaded">
+                      <div class="layout-block footer-marquee-repeat widget heading-widget"><p class="heading-title">. Technology • Innovation • Solutions</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="layout-block footer-content-section layout-flex layout-boxed layout-container layout-parent layout-loaded">
+              <div class="layout-inner">
+                <div class="layout-block footer-content-row layout-full layout-flex layout-container layout-loaded">
+
+                  <!-- START: Footer left box -->
+                  <div class="layout-block footer-contact-column layout-full fo-box-left layout-flex layout-container layout-loaded">
+                    <div class="layout-block footer-contact-heading layout-full line-bottom border-color-transparent-white-light layout-flex layout-container layout-loaded">
+                      <!-- EDIT: footer headline (<br> = line break). -->
+                      <div class="layout-block footer-contact-title widget">
+                        <div class="widget-content">
+                          <h2 class="mil-title"><span> <span class="opacity-7">Let’s</span> <br> build something useful </span></h2>
+                        </div>
+                      </div>
+                      <!-- EMAIL BUTTON: this is a mailto: link. It opens the visitor's own email app
+                           with a new message to ByteX. It does not send anything by itself.
+                           EDIT: the label, the address and the subject (spaces are written as %20). -->
+                      <div class="layout-block footer-contact-link widget">
+                        <div class="widget-content">
+                          <div>
+                            <a href="mailto:bytex.my@gmail.com?subject=Project%20enquiry%20for%20ByteX" class="text-uppercase fs-14 fw-500 butn-arrow butn-rounded">
+                              <span>Email ByteX</span>
+                              <span class="arrow-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"></path></svg>
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"></path></svg>
+                              </span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="layout-block footer-bottom layout-full layout-flex layout-container layout-loaded">
+                      <div class="layout-block footer-brand-column layout-full layout-flex layout-container layout-loaded">
+                        <!-- Footer logo: the pink logo works on both theme backgrounds.
+                             KEEP classes "logo-light" (dark theme) and "logo-dark" (light theme). -->
+                        <div class="layout-block footer-logo widget-width-initial widget">
+                          <div class="widget-content">
+                            <a href="#top" class="logo" aria-label="ByteX — back to top">
+                              <img src="assets/images/brand/bytex-logo-red-transparent.png" alt="ByteX" class="logo-light" width="600" height="220" decoding="async" loading="lazy">
+                              <img src="assets/images/brand/bytex-logo-red-transparent.png" alt="ByteX" class="logo-dark" width="600" height="220" decoding="async" loading="lazy">
+                            </a>
+                          </div>
+                        </div>
+                        <!-- EDIT: motto, contact details and copyright year (typed by hand). -->
+                        <div class="layout-block footer-copyright widget heading-widget">
+                          <p class="heading-title">
+                            Start small. Solve real problems. Create opportunities. Grow sustainably.<br>
+                            <a class="text-link" href="mailto:bytex.my@gmail.com">bytex.my@gmail.com</a> · AIU, Malaysia<br>
+                            © 2026 ByteX. All rights reserved.
+                          </p>
+                        </div>
+                      </div>
+                      <!-- EDIT: footer links. Each href must match a section id on this page. -->
+                      <div class="layout-block footer-links-column layout-full layout-flex layout-container layout-loaded">
+                        <div class="layout-block footer-links widget">
+                          <div class="widget-content">
+                            <nav class="tags-style1" aria-label="Footer navigation">
+                              <a href="#services"> services </a>
+                              <a href="#solutions"> solutions </a>
+                              <a href="#about"> about us </a>
+                              <a href="#team"> team </a>
+                              <a href="#roadmap"> roadmap </a>
+                            </nav>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- END: Footer left box -->
+
+                  <!-- START: Footer right box (socials + updates form) -->
+                  <div class="layout-block footer-social-column layout-full fo-box-right layout-flex layout-container layout-loaded">
+                    <div class="layout-block footer-social-content layout-full layout-flex layout-container layout-loaded">
+                      <div class="layout-block footer-social-title widget">
+                        <div class="widget-content">
+                          <div class="mil-title"><span> Explore the Socials <br>of ByteX </span></div>
+                        </div>
+                      </div>
+                      <!-- SOCIAL ICONS. EDIT the href of each. The hidden "screen-reader-only" text names the platform.
+                           Also update the social links in the full-screen menu. -->
+                      <div class="layout-block footer-social-icons ui-shape-rounded ui-grid-0 widget social-icons-widget">
+                        <div class="ui-grid" role="list">
+                          <span class="ui-grid-item" role="listitem">
+                            <a class="widget-icon social-icon ui-social-icon-instagram" href="https://www.instagram.com/bytex.my/" target="_blank" rel="noopener noreferrer">
+                              <span class="screen-reader-only">ByteX on Instagram (@bytex.my)</span>
+                              <svg aria-hidden="true" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg>
+                            </a>
+                          </span>
+                          <span class="ui-grid-item" role="listitem">
+                            <a class="widget-icon social-icon ui-social-icon-envelope" href="mailto:bytex.my@gmail.com">
+                              <span class="screen-reader-only">Email ByteX</span>
+                              <svg aria-hidden="true" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"></path></svg>
+                            </a>
+                          </span>
+                          <!-- FACEBOOK (disabled): the brief names a "ByteX" Facebook page but gives no link.
+                               When you have the exact page URL, remove the comment markers around this block
+                               and replace PASTE-FACEBOOK-PAGE-URL-HERE.
+                          <span class="ui-grid-item" role="listitem">
+                            <a class="widget-icon social-icon ui-social-icon-facebook-f" href="PASTE-FACEBOOK-PAGE-URL-HERE" target="_blank" rel="noopener noreferrer">
+                              <span class="screen-reader-only">ByteX on Facebook</span>
+                              <svg aria-hidden="true" viewBox="0 0 320 512" xmlns="http://www.w3.org/2000/svg"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path></svg>
+                            </a>
+                          </span>
+                          -->
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- ===========================================================
+                         UPDATES FORM (template newsletter) — FRONTEND ONLY
+                         ByteX has no mailing-list service yet. Pressing the arrow
+                         checks the email and shows an honest message with an
+                         optional email-draft link (see initNewsletter() in main.js).
+                         Nothing is saved or sent by this website.
+                         KEEP: ids newsletter-form, newsletter-email, newsletter-status.
+                         =========================================================== -->
+                    <div class="layout-block footer-newsletter-column layout-full layout-flex layout-container layout-loaded">
+                      <div class="layout-block footer-newsletter-wrap widget">
+                        <div class="mf-widget-container">
+                          <form id="newsletter-form" class="metform-form-content" aria-label="Get ByteX updates" novalidate>
+                            <div class="metform-form-main-wrapper">
+                              <div class="page-layout ui-558">
+                                <div class="layout-block newsletter-content layout-full layout-flex layout-container layout-parent layout-loaded">
+                                  <!-- EDIT: small heading above the field. -->
+                                  <div class="layout-block newsletter-title-column layout-full layout-flex layout-container layout-loaded">
+                                    <div class="layout-block newsletter-title ui-position-inline-start ui-view-default widget icon-box-widget">
+                                      <div class="icon-box">
+                                        <div class="icon-box-symbol"><span class="widget-icon"><svg aria-hidden="true" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"></path></svg></span></div>
+                                        <div class="icon-box-content">
+                                          <div class="icon-box-title"><span>Get updates</span></div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="layout-block newsletter-field-column layout-full layout-flex layout-container layout-loaded">
+                                    <div class="layout-block newsletter-field fo-subscribe widget">
+                                      <div class="mf-input-wrapper">
+                                        <!-- The label is read by screen readers; keep for="newsletter-email" matching the input id. -->
+                                        <label class="screen-reader-only" for="newsletter-email">Your email address</label>
+                                        <input type="email" class="mf-input" id="newsletter-email" name="email" placeholder="Enter your email address" autocomplete="email" required aria-describedby="newsletter-note">
+                                      </div>
+                                    </div>
+                                    <div class="layout-block newsletter-submit ui-absolute widget">
+                                      <div class="mf-btn-wraper">
+                                        <button type="submit" class="metform-btn metform-submit-btn" aria-label="Check email and show update options">
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 30 30" aria-hidden="true"><g><path style="stroke:none;fill-rule:nonzero;fill:rgb(100%,100%,100%);fill-opacity:1" d="M 3.371094 5.011719 L 3.777344 6.769531 L 5.597656 15 L 3.777344 23.230469 L 3.371094 24.988281 L 5.039062 24.316406 L 25.664062 15.878906 L 27.800781 15 L 25.664062 14.121094 L 5.039062 5.683594 Z M 5.976562 8.113281 L 20.535156 14.0625 L 7.292969 14.0625 Z M 7.292969 15.9375 L 20.535156 15.9375 L 5.976562 21.886719 Z M 7.292969 15.9375"></path></g></svg>
+                                        </button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <!-- EDIT: note under the field. -->
+                                  <div class="layout-block newsletter-privacy-column layout-full layout-flex layout-container layout-loaded">
+                                    <div class="layout-block newsletter-privacy widget heading-widget">
+                                      <p class="heading-title" id="newsletter-note">We don’t run a mailing list yet; the arrow offers an email draft instead. Nothing is saved.</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- Messages from main.js appear here. KEEP id, hidden and role="status". -->
+                            <p id="newsletter-status" class="fs-14" role="status" hidden></p>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- END: Footer right box -->
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+        <!-- END: Footer / Contact -->
+
+      </div>
+    </div>
+
+    <!-- ===================================================================
+         SCRIPTS
+         Third-party libraries first (do not edit), then main.js.
+         KEEP THIS ORDER.
+         =================================================================== -->
+    <script defer src="assets/vendor/gsap/gsap.js"></script>
+    <script defer src="assets/vendor/gsap/scroll-trigger.js"></script>
+    <script defer src="assets/vendor/gsap/scroll-smoother.js"></script>
+    <script defer src="assets/vendor/gsap/scroll-to.js"></script>
+    <script defer src="assets/vendor/swiper/swiper.js"></script>
+    <script defer src="assets/js/main.js"></script>
+  </body>
+</html>

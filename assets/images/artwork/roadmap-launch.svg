@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" width="1200" height="760">
+  <!-- ByteX illustration "priority-launch". Colours: #FD1843 (True Pink), #FFF9FA (Chill White). -->
+  <defs>
+    <radialGradient id="glow" cx="0.5" cy="0.6" r="0.65">
+      <stop offset="0" stop-color="#FD1843" stop-opacity=".55"/>
+      <stop offset=".45" stop-color="#FD1843" stop-opacity=".16"/>
+      <stop offset="1" stop-color="#FD1843" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M60 0H0V60" fill="none" stroke="#FFF9FA" stroke-opacity=".05" stroke-width="2"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="760" fill="#1B1B1B"/>
+  <rect width="1200" height="760" fill="url(#grid)"/>
+  <rect width="1200" height="760" fill="url(#glow)"/>
+  <path d="M96 654H840Q870 654 892 632L1008 532"
+        fill="none" stroke="#FD1843" stroke-opacity=".55" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+  <g transform="translate(435.0 169.4) scale(0.825)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <g stroke="#8F0A26" stroke-width="41.21" transform="translate(12.12 14.55)">
+        <path d="M200 30C275 85 285 185 252 280H148C115 185 125 85 200 30Z"/>
+        <circle cx="200" cy="145" r="32"/>
+        <path d="M148 225 95 290V335L150 300M252 225 305 290V335L250 300"/>
+        <path d="M180 320 200 375 220 320"/>
+    </g>
+    <g stroke="#FFF9FA" stroke-width="41.21">
+        <path d="M200 30C275 85 285 185 252 280H148C115 185 125 85 200 30Z"/>
+        <circle cx="200" cy="145" r="32"/>
+        <path d="M148 225 95 290V335L150 300M252 225 305 290V335L250 300"/>
+        <path d="M180 320 200 375 220 320"/>
+    </g>
+  </g>
+</svg>

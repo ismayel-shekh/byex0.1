@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240">
+  <!-- ByteX role badge "role-coordinator" (placeholder until a real photo is added). -->
+  <rect width="240" height="240" fill="#FD1843"/>
+  <g transform="translate(48.0 48.0) scale(0.3600)" fill="none" stroke="#FFF9FA"
+     stroke-width="30.56" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M200 200 85 85M200 200 315 85M200 200 85 315M200 200 315 315"/>
+        <circle fill="#FD1843" cx="200" cy="200" r="52"/>
+        <circle fill="#FD1843" cx="85" cy="85" r="36"/>
+        <circle fill="#FD1843" cx="315" cy="85" r="36"/>
+        <circle fill="#FD1843" cx="85" cy="315" r="36"/>
+        <circle fill="#FD1843" cx="315" cy="315" r="36"/>
+  </g>
+</svg>

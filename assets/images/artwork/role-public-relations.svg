@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1200" width="900" height="1200">
+  <!-- ByteX illustration "role-public-relations". Colours: #FD1843 (True Pink), #FFF9FA (Chill White). -->
+  <defs>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.65">
+      <stop offset="0" stop-color="#FD1843" stop-opacity=".55"/>
+      <stop offset=".45" stop-color="#FD1843" stop-opacity=".16"/>
+      <stop offset="1" stop-color="#FD1843" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M60 0H0V60" fill="none" stroke="#FFF9FA" stroke-opacity=".05" stroke-width="2"/>
+    </pattern>
+  </defs>
+  <rect width="900" height="1200" fill="#1B1B1B"/>
+  <rect width="900" height="1200" fill="url(#grid)"/>
+  <rect width="900" height="1200" fill="url(#glow)"/>
+  <g transform="translate(250.0 328.0) scale(1.0)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <g stroke="#8F0A26" stroke-width="34.00" transform="translate(10.00 12.00)">
+        <path d="M70 55H230Q270 55 270 95V165Q270 205 230 205H130L75 250V205H70Q30 205 30 165V95Q30 55 70 55Z"/>
+        <path fill="#1B1B1B" d="M170 175H330Q370 175 370 215V285Q370 325 330 325H325V370L270 325H170Q130 325 130 285V215Q130 175 170 175Z"/>
+    </g>
+    <g stroke="#FFF9FA" stroke-width="34.00">
+        <path d="M70 55H230Q270 55 270 95V165Q270 205 230 205H130L75 250V205H70Q30 205 30 165V95Q30 55 70 55Z"/>
+        <path fill="#1B1B1B" d="M170 175H330Q370 175 370 215V285Q370 325 330 325H325V370L270 325H170Q130 325 130 285V215Q130 175 170 175Z"/>
+    </g>
+  </g>
+</svg>
